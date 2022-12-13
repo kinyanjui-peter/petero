@@ -3,7 +3,10 @@
 /**
  * _islower - check if character is lowecase
  *
- * Return : 1 if character islowercase else return 0
+ * Return : 1 or 0
+ *
+ * parameter passes a value ofpe int 
+ * 
  */
 
 int _islower(int c)
