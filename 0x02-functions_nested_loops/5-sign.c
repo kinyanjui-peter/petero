@@ -3,28 +3,24 @@
  * print_sign - prints signs for a number
  * developed by peter
  * Return : 1 or 0
- * @n: interger passed to the function
+ *@n: interger passed to the function
  */
 
 int print_sign(int n)
 {
-	int pos = '+';
-	int neg = '-';
-	int zer	= '0';
-
 	if (n > 0)
 	{
-	putchar(pos);
+	_putchar('+');
 	return (1);
-	}	
-	else if(n == 0)
+	}
+	else if (n == 0)
 	{
-	_putchar(zer);
+	_putchar('0');
 	return (0);
 	}
 	else
 	{
-	_putchar(neg);
-	return (-1)
+	_putchar('-');
+	return (-1);
 	}
 }
