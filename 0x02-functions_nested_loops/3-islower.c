@@ -4,9 +4,7 @@
  * _islower - check if character is lowecase
  *
  * Return : 1 or 0
- *
- * parameter passes a value ofpe int 
- * 
+ * parameter passes a value ofpe int
  */
 
 int _islower(int c)
