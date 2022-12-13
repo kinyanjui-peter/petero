@@ -13,12 +13,18 @@ int print_sign(int n)
 	int zer	= '0';
 
 	if (n > 0)
-		return (1);
-	_putchar(pos);
-	if (n == 0)
-		return (0);
+	{
+	putchar(pos);
+	return (1);
+	}	
+	else if(n == 0)
+	{
 	_putchar(zer);
-	if (n < 0)
-		return (-1);
-			_putchar(neg);
+	return (0);
+	}
+	else
+	{
+	_putchar(neg);
+	return (-1)
+	}
 }
