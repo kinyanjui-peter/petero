@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _isalpha - check if character is lowecase
+ * _isalpha - Check if character is lowecase
  * @c: character to be checked
- * Return : 1 or 0
+ * Return: 1 or 0
  *
  */
 
