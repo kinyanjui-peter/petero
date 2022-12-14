@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * print_sign - prints signs for a number
- * developed by peter
- * Return : 1 or 0
- *@n: interger passed to the function
+ * print_sign - Prints signs for a number
+ * Return: 1 or 0
+ * @n: interger passed to the function
  */
 
 int print_sign(int n)
