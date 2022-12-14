@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * main - prints _putchar
+ * main - Prints _putchar
  *
- * written by : peter
- * Return : 0
+ * Return: 0
  */
 
 int main(void)
