@@ -12,6 +12,8 @@ int main(void)
 {
 	int i;
 
+	printf("infinite loop incoming :\n");
+
         i = 0;
         positive_or_negative(i);
         return (0);
