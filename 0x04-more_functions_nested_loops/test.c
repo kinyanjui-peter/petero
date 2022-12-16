@@ -1,20 +1,25 @@
 #include <stdio.h>
-#include "main.h"
+
 
 /**
- * main - Prints 1 to 9
+ * main - Prints a line
+ *
+ * @n: maximum number of n
  * Return: void
  *
  */
 
-void main(void)
+void main(int n)
 {
-	int y;
+	int x;
 
-	for (y = -1; y <= 10; y++)
+scanf("%d", &n);
+	for (x = 0; x <= n; x++)
 	{
-		printf("%d", y);
-		putchar(y);
+		if (n <= 0)
+		printf("\n");
+		else
+		printf("_");
 	}
-	putchar('\n');
+	printf("\n");
 }
