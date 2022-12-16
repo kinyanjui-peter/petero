@@ -1,30 +1,18 @@
 #include <stdio.h>
 
 /**
- * print_diagonal - Print diagonal
- *@n: maximum number
- * Return: 0
+ * print_numbers - Prints 1 to 9
+ * Return: void
  *
  */
+
 void main(void)
-	{
-		int n;
-		
-		printf("enter number " );
-		scanf("%d", &n);
-	int x, y, z;
+{
+	int y;
 
-	for (x = 1; x <= n; x++)
+	for (y = -1; y <= 10; y++)
 	{
-		for (y = 1; y <= x; y++)
-		{
-			if (x == y)
-				printf("\\");
-			else
-				printf(" ");
-		}
-		printf("\n");
+		_putchar(y);
 	}
-	printf("\n");
+	_putchar('\n');
 }
-
