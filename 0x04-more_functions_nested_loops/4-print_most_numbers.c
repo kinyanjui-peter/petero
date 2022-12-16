@@ -5,14 +5,14 @@
  * Return: void
  *
  */
-void print_most_numbers(void);
+void print_most_numbers(void)
 {
 	int y;
 
 	y = 0;
 	while (y < 10)
 	{
-		if (!(y == '2') || (y == '4'))
+		if ((y != '2') || (y != '4'))
 		_putchar(y);
 		y++;
 	}
