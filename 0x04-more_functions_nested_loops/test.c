@@ -1,24 +1,30 @@
 #include <stdio.h>
 
 /**
- * main - Print perten
- *
- * Return: void
+ * print_diagonal - Print diagonal
+ *@n: maximum number
+ * Return: 0
  *
  */
 void main(void)
-{
+	{
+		int n;
+		
+		printf("enter number " );
+		scanf("%d", &n);
 	int x, y, z;
 
-	printf("enter the number of multiplier");
-	scanf("%d", &x);
-
-	for (y == 0; y <= x; y++)
+	for (x = 1; x <= n; x++)
 	{
-		for (z = 0; z <= y; z++)
+		for (y = 1; y <= x; y++)
 		{
-			printf("%d", z);
+			if (x == y)
+				printf("\\");
+			else
+				printf(" ");
 		}
-	printf("\n");
+		printf("\n");
 	}
+	printf("\n");
 }
+
