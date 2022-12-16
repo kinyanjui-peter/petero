@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * print_numbers - Prints 1 to 9
+ * main - Prints 1 to 9
  * Return: void
  *
  */
@@ -12,7 +13,8 @@ void main(void)
 
 	for (y = -1; y <= 10; y++)
 	{
-		_putchar(y);
+		printf("%d", y);
+		putchar(y);
 	}
-	_putchar('\n');
+	putchar('\n');
 }
