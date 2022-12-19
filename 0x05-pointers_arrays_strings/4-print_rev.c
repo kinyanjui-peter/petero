@@ -13,10 +13,9 @@ void print_rev(char *s)
 
 while (s[x] != '\0')
 x++;
-for (y = x - 1; x >= 0; x--)
+for (y = x - 1; y >= 0; y--)
 {
-_putchar(s[x]);
+_putchar(s[y]);
 }
-_putchar('\n);
-}
+_putchar('\n');
 }
