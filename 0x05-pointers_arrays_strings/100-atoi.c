@@ -30,5 +30,5 @@ int _atoi(char *s)
 			t++;
 		} while (*t >= '0' && *t <= '9');
 	}
-	return (n * x);
-
+	return (0);
+}
