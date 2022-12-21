@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * *_strcat - concernate 2 strings
@@ -10,9 +9,13 @@
  */
 
 char *_strcat(char *dest, char *src)
-{char *fin;
+{
+	int counter = 0;
+	int last = 0;
 
-	fin = *dest;
-	strcat(*dest, *src);
-	_putchar(fin);
+	while (dest[counter++])
+		last++;
+	for (counter = 0; src[counter]; counter++)
+		dest[last] = src[counter];
+	return (dest);
 }
