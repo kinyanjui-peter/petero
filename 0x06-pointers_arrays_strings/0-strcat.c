@@ -13,6 +13,6 @@ char *_strcat(char *dest, char *src)
 {char *fin;
 
 	fin = *dest;
-	strcpy(*dest, *src);
+	strcat(*dest, *src);
 	_putchar(fin);
 }
