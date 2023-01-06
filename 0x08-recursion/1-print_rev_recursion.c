@@ -13,7 +13,7 @@ int length(char *s)
 	{
 		return ((1 + length(s + 1)));
 	}
-	return (0);
+	return (s);
 }
 
 void _print_rev_recursion(char *s)
