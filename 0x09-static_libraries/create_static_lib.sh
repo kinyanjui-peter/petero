@@ -1,2 +1,4 @@
-#!bin/bash
-gcc -c ar crs ranlib liball.a -L. *.c
+#!/bin/bash
+gcc -c *.c
+ar -rc liball.a *.o
+ranlib liball.a
