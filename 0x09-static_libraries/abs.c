@@ -1,11 +1,11 @@
 #include "main.h"
+
 /**
- * _putchar - prints character.
+ * _abs - prints
  * Return: 0
  */
 
-int _putchar(char c)
+int _abs(int n)
 {
 	return (0);
 }
-

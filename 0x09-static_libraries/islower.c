@@ -1,11 +1,11 @@
 #include "main.h"
+
 /**
- * _putchar - prints character.
+ * _islower - prints
  * Return: 0
  */
 
-int _putchar(char c)
+int _islower(int c)
 {
 	return (0);
 }
-

@@ -1,11 +1,11 @@
 #include "main.h"
+
 /**
- * _putchar - prints character.
+ * _strcmp - prints
  * Return: 0
  */
 
-int _putchar(char c)
+int _strcmp(char *s1, char *s2)	
 {
 	return (0);
 }
-
