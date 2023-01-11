@@ -10,8 +10,8 @@
 
 int **alloc_grid(int width, int height)
 {
-	int x;
-	int y;
+	int x = 0;
+	int y = 0;
 	int **ptr;
 
 	ptr = (int **)malloc(sizeof(int *) * width);
