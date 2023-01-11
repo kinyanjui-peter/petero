@@ -13,8 +13,6 @@ char *create_array(unsigned int size, char c)
 	unsigned int x;
 	char *ptr;
 	
-	
-	ptr = c;	
 	ptr = (char *)malloc(sizeof(char) * size);
 	if (ptr == NULL)
 	{
@@ -24,15 +22,12 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-
 	for (x = 0; x < size; x++)
 	{
-	 c = _putchar(ptr[x]);
+	c = _putchar(ptr[x]);
 	}
 	ptr[0] = 'P';
 	_putchar('\0');
 	return (ptr);
 	free(ptr);
 }
-
-
