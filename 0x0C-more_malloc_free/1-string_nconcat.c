@@ -8,37 +8,30 @@
  *Return: pointer to s1
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
-{
-	int x;
-	unsigned int *p;
+{	unsigned int x;
+	unsigned char *p;
+	unsigned int s1len = 0, s2len = 0;
 
-
-	if (s1 == NULL || s2 == NULL)
+	while (s1 && s1[s1len])
+		s1len++;
+	while (s2 && s2[s2len])
+		s2len++;
+	if (n > s2len)
 	{
-		return ("");
+		p = ((char *)malloc(sizeof(char)) * (s1len + s2len + 1));
 	}
-	p = (unsigned int *)malloc(sizeof * n (int));
-		{
+			else
+			{
+			p = ((char *)malloc(sizeof(char)) * (s1len + n + 1));
+			}
 			if (p == NULL)
 			{
-				return(NULL);
+				return (NULL);
 			}
 		}
-		for (x = 0; s1[x] != '\0'; x++)
+		for (x = 0; x < s1len; x++)
 		{
-			p[x] = s[x];
-			for (y = 0; s2[y] != '\0'; y++)
-			{
-				if (n >= strlen(*s2[y]))
-				{
-				p[x] = p[x] +s2[y];
-				}
-				else 
-				{
-					p[x] += *s2[n];
-				}
-			}
+		p[x] = s1[x];
 		}
-		free(p);
-		return (p);
-}		
+		return (*p);
+}
