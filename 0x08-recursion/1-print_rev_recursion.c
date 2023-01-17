@@ -8,13 +8,9 @@
 
 int length(char *s)
 {
-	int c;
-
-	c = 0;
 	if (*s == '\0')
-	return (c);
-	c++;
-	length(s + 1);
+		return (0);
+	return 1 + length(s + 1);
 }
 
 void _print_rev_recursion(char *s)
