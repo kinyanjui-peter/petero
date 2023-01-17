@@ -23,8 +23,7 @@ void _print_rev_recursion(char *s)
 	int x;
 
 	x = length(s);
-	if (x == 0)
-		return;
-		_putchar(s[--x]);
+	while (x >= 0) 
+		_putchar(s[x---]);
 		_print_rev_recursion(s);
 }
