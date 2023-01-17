@@ -3,8 +3,9 @@
  * _print_rev_recursion - print reverse
  * length - Calculate the length
  * @s: string
- * Return: reversed string
+ * Return: c length
  */
+
 int length(char *s)
 {
 	int c;
@@ -23,6 +24,6 @@ void _print_rev_recursion(char *s)
 	int x;
 
 	x = length(s);
-		_putchar(s[x]);
-		_print_rev_recursion(s[x - 1]);
-}	
+		_putchar(s[x - 1]);
+		_print_rev_recursion(s);
+}
