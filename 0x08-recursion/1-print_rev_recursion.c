@@ -7,26 +7,25 @@
  */
 int length(char *s)
 {
-	if (*s == '\0')
-	return;
-	else
+	int c;
+
+	c = 0;
+	while (*s != '\0')
 	{
-		return ((1 + length(s + 1)));
+		c++;
+		s++;
 	}
-	return (s);
+	return (c);
 }
 
 void _print_rev_recursion(char *s)
 {
 	int x;
 
-	x = s[length()];
-
-	if (x < 0)
-	return;
-	else
+	x = s[length(s)];
+	if (x == 0)
 	{
-		_putchar(*s);
-		_print_rev_recursion(s - 1);
+		_putchar(s[--x]);
+		_print_rev_recursion(s);
 	}
 }
