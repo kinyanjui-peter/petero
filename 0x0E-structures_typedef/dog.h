@@ -2,15 +2,17 @@
 #define DOG_H
 
 /**
- * define struct dog 
- *
+ * struct dog - define struct dog
+ *@name: first member
  * it is a header file.
- *
+ *@age: second member
+ *@owner: 3rd member.
  *contain prototype
  *
  */
-struct dog {
-	char * name;
+struct dog
+{
+	char *name;
 	float age;
 	char *owner;
 };
