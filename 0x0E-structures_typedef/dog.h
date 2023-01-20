@@ -1,5 +1,5 @@
-#ifndef DOG_H
-#define DOG_H
+#ifndef DOG
+#define DOG
 
 /**
  * struct dog - define struct dog
@@ -7,7 +7,6 @@
  * it is a header file.
  *@age: second member
  *@owner: 3rd member.
- *contain prototype
  *
  */
 struct dog
