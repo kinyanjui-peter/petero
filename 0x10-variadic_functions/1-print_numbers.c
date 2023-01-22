@@ -23,6 +23,7 @@ for (i = 0; i < n; i++)
 	printf("%d", no);
 printf("%s", separator);
 }
+printf("\n");
 va_end(list);
 }
 return;
