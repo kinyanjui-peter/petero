@@ -2,10 +2,11 @@
 #include <stdio.h>
 
 /**
- * print_name - prints name
- *@name: name
- *@f: function
- *return: void
+ * int_index - prints name
+ *@array: name
+ *@size: function
+ *@cmp: pointer to array
+ *Return: c
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -27,11 +28,11 @@ int int_index(int *array, int size, int (*cmp)(int))
 				c = x;
 				break;
 			}
-if ((cmp(array[x]) == (-1)))
+			if ((cmp(array[x]) == (-1)))
 		{
 			return (c);
 		}
 		}
 	}
-	return (c);
+return (c);
 }
