@@ -10,22 +10,10 @@
  *
  *Return: var-arg
  */
-int sum_them_all(const unsigned int n, ...);
-
-int main(void)
-{
-printf("summation is %d", sum_them_all(2, 20, 30));
-return (0);
-}
-/**
- * sum_them_all -  variadic function
- *Return: total
- *
- */
 int sum_them_all(const unsigned int n, ...)
 {
-int total;
-int i;
+unsigned int total;
+unsigned int i;
 
 if (n == 0)
 	return (0);
