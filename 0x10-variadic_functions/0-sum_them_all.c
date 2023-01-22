@@ -1,40 +1,40 @@
 #include "variadic_functions.h"
 #include <stdlib.h>
 #include <stdarg.h>
+#include <stdio.h>
 
 /**
- * print numbers: print numbers
- * main: function main
- *@separator: separates
- *@n: number of integers
- *return: list.
+ * sum_them_all - summing the numberes
+ * main - main function
+ *@n: numbers
+ *
+ *Return: var-arg
  */
-void print_numbers(const char *separator, const unsigned int n, ...);
+int sum_them_all(const unsigned int n, ...);
 
 int main(void)
 {
-printf("the sum of the %d numbers is: %d", &n, list); 
+printf("summation is %d", sum_them_all(2, 20, 30));
 return (0);
 }
 /**
- * print_numbers: function variadic
+ * sum_them_all -  variadic function
+ *Return: total
  *
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int i;
-	unsigned int no;
+int total;
+int i;
 
-var_list list;
-
-var_start(list, n);
-for (i = 0; i < n; i++)
-{
-	no = var_arg(list, int);
-	printf("%d%s", no, separator);
-	printf("%c", separator);
+if (n == 0)
+	return (0);
+va_list sum;
+va_start(sum, n);
+	for (i = 0; i < n; i++)
+	{
+	total += va_arg(sum, int);
+	}
+va_end(sum);
+return (total);
 }
-var_end(list);
-return (list);
-}
-
