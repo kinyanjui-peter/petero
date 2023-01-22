@@ -5,9 +5,9 @@
  * print_name - print name
  *@name: name ofthe object
  *@f: pointer to the name
- *Return: void
+ *retun: void
  */
-void(char *name, void (*f)(char *))
+void print_name(char *name, void (*f)(char *))
 {
 	if (name && f)
 	f(name);
