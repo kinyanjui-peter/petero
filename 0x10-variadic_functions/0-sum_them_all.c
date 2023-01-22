@@ -2,10 +2,8 @@
 
 /**
  * sum_them_all - summing the numberes
- * main - main function
  *@n: numbers
- *
- *Return: var-arg
+ *Return: total or 0
  */
 int sum_them_all(const unsigned int n, ...)
 {
