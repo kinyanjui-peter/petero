@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 /**
  * new_dog - create a copy
@@ -17,26 +18,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int stname;
 	int stown;
 
-	if (new_dog == 0)
-		return (fail);
-	for (c = 0; (*name[c] != '\0'); c++)
+	/*if (new_dog)*/
+	{
+	for (c = 0; (name[c] != '\0'); c++)
 	{
 		lname++;
 	}
-	for (x = 0; (*own[x] != '\0'); x++)
+	for (x = 0; (owner[x] != '\0'); x++)
 	{
 		lown++;
 	}
-	ptr = malloc(sizeof(struct dog));
+	ptr = malloc(sizeof(dog_t));
 		if (ptr == NULL)
 		return (NULL);
-	ptr->name = malloc(lname + 1);
+		free(ptr);
+	ptr->name = malloc(sizeof(char) * (lname + 1));
 if (ptr->name == NULL)
 	{
 	free(ptr->name);
 	return (NULL);
 	}
-	ptr->owner = malloc(lown + 1);
+	ptr->owner = malloc(sizeof(char) * (lown + 1));
 if (ptr->owner == NULL)
 {
 	free(ptr->owner);
@@ -48,9 +50,10 @@ for (stname = 0; stname <= lname; stname++)
 }
 for (stown = 0; stown < lown; stown++)
 {
-	ptr->own[stown] = owner[stown];
+	ptr->owner[stown] = owner[stown];
 }
 ptr->age = age;
 return (ptr);
 free(ptr);
+}
 }
