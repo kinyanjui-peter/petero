@@ -10,8 +10,7 @@ int main(void)
 
 for (counter = 'a'; counter <= 'z'; counter++)
 {
-	if (counter == 'q' || counter == 'z')
-		return;
+	if (counter != 'q' && counter != 'e')
 	putchar(counter);
 }
 printf("\n");
