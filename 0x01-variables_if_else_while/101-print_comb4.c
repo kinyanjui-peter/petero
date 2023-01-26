@@ -16,11 +16,11 @@ int main(void)
 			{
 				for (z = 0; z < 10; z++)
 				{
-				if (x != y && y != z && z != X)
+				if (x != y && y != z && z != x) 
 				{
 					putchar(x);
 					putchar(y);
-					putchar(z)
+					putchar(z);
 					if (x == '7' && y == '8' && z == '9')
 					continue;
 					putchar(',');
@@ -29,6 +29,7 @@ int main(void)
 			}
 		}
 		putchar ('\n');
+	}
 	}
 	return (0);
 }
