@@ -2,7 +2,7 @@
 /**
  * main -Print alphabetic in small and capital
  *
- * Return : 0
+ *Return: 0
  *
 */
 int main(void)
