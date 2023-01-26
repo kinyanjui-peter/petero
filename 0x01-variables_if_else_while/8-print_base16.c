@@ -1,6 +1,10 @@
 #include <stdio.h>
-/* main - Entry to body*/
-/* Return  : 0*/
+/**
+ * main - Entry to body
+ *
+ *Return: 0
+ */
+
 int main(void)
 {
 	int counter;
