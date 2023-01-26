@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  *main - Prints number 0 to 9
  * Return: 0
