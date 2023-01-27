@@ -26,7 +26,7 @@ int last;
 			}
 			else
 			{
-			_putchar(mul/ 10 + '0'); 
+			_putchar(mul / 10 + '0');
 			last = (mul % 10);
 			_putchar(last + '0');
 			_putchar(',');
