@@ -11,8 +11,8 @@ int y = 0;
 
 y = x % 10;
 if (y < 0)
-y = y * -1;
+y *= -1;
 _putchar(y + '0');
-_putchar('\n');
 return (y);
+_putchar('\n');
 }
