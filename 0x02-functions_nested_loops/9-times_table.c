@@ -23,6 +23,7 @@ int last;
 			_putchar(mul + '0');
 			_putchar(',');
 			_putchar(' ');
+			_putchar(' ');
 			}
 			else
 			{
