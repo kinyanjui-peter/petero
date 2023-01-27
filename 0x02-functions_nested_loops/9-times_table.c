@@ -20,18 +20,19 @@ int last;
 			mul = r * c;
 			if (mul < 10)
 			{
+
+				_putchar(' ');
+				_putchar(' ');
 			_putchar(mul + '0');
 			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
 			}
 			else
 			{
+				_putchar(' ');
 			_putchar(mul / 10 + '0');
 			last = (mul % 10);
 			_putchar(last + '0');
 			_putchar(',');
-			_putchar(' ');
 			}
 		}
 		_putchar('$');
