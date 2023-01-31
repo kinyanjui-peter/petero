@@ -10,18 +10,7 @@
  *
  *Description: singly linked list node structure
  */
-typedef struct list_s
-{
-	char *str;
-	char *str;
-	struct list_s *next;
-} list_t;
-/**
- * print_list - prints all elements
- *@h: pointer to print element
- *
- *Return: number of nodes
- */
+
 size_t print_list(const list_t *h)
 {
 	size_t lenode;
@@ -30,11 +19,11 @@ size_t print_list(const list_t *h)
 	while (h != NULL)
 	{
 		if (h->str == NULL)
-			printf("%d",0, "(nil)");
+			printf("[0] (nil)\nt ");
 		else
 		printf("[%d] %s", h->len, h->str);
 		h = h->next;
-		lenode += 1;
+		lenode++;
 	}
 	return (lenode);
 }
