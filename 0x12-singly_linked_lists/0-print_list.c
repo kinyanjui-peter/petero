@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "lists.h"
 
-/* *
+/**
  * struct list_s - singly linked list*
  * @str: string - (malloc'ed string)
  *@len: length of the string
