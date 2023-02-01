@@ -2,27 +2,26 @@
 #include "lists.h"
 
 /**
- * struct list_s - singly linked list*
- * @str: string - (malloc'ed string)
- *@len: length of the string
- *@len: length of the string
- *
- *Description: singly linked list node structure
+ * print_list - display linked list
+ * @h: variable of type list_t;
+ * Return: size of list
  */
 
 size_t print_list(const list_t *h)
 {
-	size_t lenode;
+	list_t *temp;
 
-	lenode = 0;
-	while (h != NULL)
+	temp->len = 0;
+	temp = h;
+	while (temp != NULL)
 	{
-		if (h->str == NULL)
+		if (temp->str == NULL)
 			printf("[0] (nil)\n");
 		else
-		printf("[%d] %s", h->len, h->str);
-		h = h->next;
-		lenode++;
+		printf("%s", temp->str);
+		temp->++;
+		temp = temp->next;
 	}
-	return (lenode);
+	printf("[%d] %s", temp->str);
+	return (temp->len);
 }
