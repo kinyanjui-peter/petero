@@ -2,7 +2,7 @@
 #define LISTS_H
 #include <stdlib.h>
 #include <string.h>
-
+#include <stdio.h>
 /**
  * listint_s - singly linked list
  *@next: points to the next node
