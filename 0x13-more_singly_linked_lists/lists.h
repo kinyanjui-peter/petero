@@ -4,9 +4,10 @@
 #include <string.h>
 
 /**
- * struct list_s - singly linked list
+ * listint_s - singly linked list
  *@next: points to the next node
  *Description: singly linked list node structure
+ *listint_t: alias name for the structure.
  */
 typedef struct listint_s
 }
