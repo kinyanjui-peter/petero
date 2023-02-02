@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * listint_s - singly linked list
+ * struct listint_s - singly linked list
  *@next: points to the next node
  *Description: singly linked list node structure
  *listint_t: alias name for the structure.
