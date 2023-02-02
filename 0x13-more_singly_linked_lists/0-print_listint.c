@@ -7,7 +7,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	listint_t head;
+	listint_t *temp;
 	size_t c = 0;
 
 	temp = h;
@@ -15,6 +15,7 @@ size_t print_listint(const listint_t *h)
 	{
 		_putchar(temp + '0');
 		c++;
+		temp = temp->next;
 	}
-	return (c + 1);
+	return (c);
 }
