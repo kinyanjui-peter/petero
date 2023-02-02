@@ -7,15 +7,12 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	listint_t *temp;
 	size_t c = 0;
 
-	temp = h;
-	while (temp != 0)
+	while (h)
 	{
-		_putchar(temp + '0');
 		c++;
-		temp = temp->next;
+		h = h->next;
 	}
 	return (c);
 }
