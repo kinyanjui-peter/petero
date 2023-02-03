@@ -2,13 +2,12 @@
 /**
  * add_nodeint_end - add node at theend
  *@head: pointer to head address
- *@str: elements of lists
+ *@n: elements of lists
  *Return: new lement address or NULL
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *newnode, *temp;
-	
 
 	newnode = (listint_t *)malloc(sizeof(listint_t));
 	{
@@ -18,10 +17,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	newnode->n = n;
 	newnode->next = NULL;
 	if (*head == NULL)
-	{			
+	{
 		*head = newnode;
 		return (newnode);
-	}			
+	}
 		temp = *head;
 	while (temp->next != NULL)
 	{
