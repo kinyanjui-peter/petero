@@ -11,7 +11,7 @@ listint_t *nextone;
 
 if (head == NULL)
 {
-	return;
+	head = NULL;
 }
 while (*head != NULL)
 {
