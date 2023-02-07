@@ -7,7 +7,7 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (index < 0 || index >= CHAR_BIT * sizeof(*n))
+	if (index <= 0 || index >= CHAR_BIT * sizeof(*n))
 	{
 		return (-1);
 	}
