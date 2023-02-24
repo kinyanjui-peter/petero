@@ -17,18 +17,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 	return(0);
 	}
-	buf =malloc(sizeof(char) * letters);
+	buf = malloc(sizeof(char) * (letters + 1));
 	if (buf == NULL)
 		return (0);
 	x = open(filename, O_RDONLY);
 	y = read(x, buf, letters);
-	w = write(STDOUT_F:LEND, buf, y)
+	z = write(STDOUT_FILENO, buf, y);
 	if (x == -1 || y == -1 || z == -1 || z != y)
 	{
 		free(buf);
+		close(x);
 		return(0);
 	}
 	free(buf);
-	close(o);
+	close(x);
 	return(0);
 }
