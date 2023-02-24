@@ -1,12 +1,10 @@
 #include "main.h"
 /**
- *
- * read_textfile -read and print t posix
+ * read_textfile - Read and print t posix
  *@filename: pointer to file name
  *@letters: letters to br printed
  *
  *Return: number of bytes the file can read
- *
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -15,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 	{
-	return(0);
+	return (0);
 	}
 	buf = malloc(sizeof(char) * (letters + 1));
 	if (buf == NULL)
@@ -27,9 +25,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		free(buf);
 		close(x);
-		return(0);
+		return (0);
 	}
 	free(buf);
 	close(x);
-	return(0);
+	return (y);
 }
