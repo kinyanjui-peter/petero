@@ -1,25 +1,27 @@
 #include "main.h"
 /**
- * create _file - function that create a file
- *@filename::
- *@text_content:
- *Return: 
+ * create_file - function that create a file
+ *@filename: name of file
+ *@text_content: text to be copied to filename
+ *Return:-1
  */
 int create_file(const char *filename, char *text_content)
 {
 	int o, w, len = 0;
 
 	if (filename == NULL)
-		return(-1);
+		return (-1);
 	if (text_content != NULL)
 	{
-		for (len = 0; text_content[len];)
-				len++;
+	for (len = 0; text_content[len]; len++)
+	{
+		text_content[len] += len;
+	}
 	}
 	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, NULL);
 	w = write(o, text_content, len);
 	if (o == -1 || w == -1)
-		return(-1);
+		return (-1);
 	close(o);
 	return (1);
 }
