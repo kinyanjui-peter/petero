@@ -5,7 +5,7 @@
  *@text_content:
  *Return: 
  */
-int create_file(const char ^filename, char *text_content)
+int create_file(const char *filename, char *text_content)
 {
 	int o, w, len = 0;
 
@@ -13,11 +13,11 @@ int create_file(const char ^filename, char *text_content)
 		return(-1);
 	if (text_content != NULL)
 	{
-		fro (len = 0; text_content[len])
+		for (len = 0; text_content[len])
 				len++;
 	}
-	o = open(filename, O_CREATE | O_RDWR | O_TRUNC,NULL);
-	IF (o == -1 || w == -1)
+	o = open(filename, O_CREATE | O_RDWR | O_TRUNC, NULL);
+	if (o == -1 || w == -1)
 		return(-1);
 	fclose(o);
 	return (0);
