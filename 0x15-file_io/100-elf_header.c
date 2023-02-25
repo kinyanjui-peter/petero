@@ -1,7 +1,6 @@
-
 #include "main.h"
 /**
- * print_entry - Prints the entry point of an ELF header.
+ * print_entry - Prints the entry point of an ELF head.
  * @e_entry: The address of the ELF entry point.
  * @elfparam: A pointer to an array containing the ELF class.
  */
@@ -41,7 +40,7 @@ void close_elf(int elf)
 
 /**
  * main - Displays the information contained in the
- *        ELF header at the start of an ELF file.
+ *        ELF head at the start of an ELF file.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
  *
@@ -52,7 +51,7 @@ void close_elf(int elf)
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	Elf64_Ehdr *header;
+	Elf64_Ehdr *head;
 	int o, r;
 
 	o = open(argv[1], O_RDONLY);
@@ -61,34 +60,34 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	header = malloc(sizeof(Elf64_Ehdr));
-	if (header == NULL)
+	head = malloc(sizeof(Elf64_Ehdr));
+	if (head == NULL)
 	{
 		close_elf(o);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
 		exit(98);
 	}
-	r = read(o, header, sizeof(Elf64_Ehdr));
+	r = read(o, head, sizeof(Elf64_Ehdr));
 	if (r == -1)
 	{
-		free(header);
+		free(head);
 		close_elf(o);
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
 
-	check_elf(header->elfparam);
+	check_elf(head->elfparam);
 	printf("ELF Header:\n");
-	print_magic(header->elfparam);
-	print_class(header->elfparam);
-	print_data(header->elfparam);
-	print_version(header->elfparam);
-	print_osabi(header->elfparam);
-	print_abi(header->elfparam);
-	print_type(header->e_type, header->elfparam);
-	print_entry(header->e_entry, header->elfparam);
+	print_magic(head->elfparam);
+	print_class(head->elfparam);
+	print_data(head->elfparam);
+	print_version(head->elfparam);
+	print_osabi(head->elfparam);
+	print_abi(head->elfparam);
+	print_type(head->e_type, head->elfparam);
+	print_entry(head->e_entry, head->elfparam);
 
-	free(header);
+	free(head);
 	close_elf(o);
 	return (0);
 }
