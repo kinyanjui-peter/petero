@@ -1,27 +1,29 @@
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 #include "lists.h"
 
 /**
- * print_list - display linked list
- * @h: variable of type list_t;
- * Return: size of list
+ * print_list - check the code for Holberton School students.
+ * @h: name of the list
+ * Return: the number of nodes.
  */
-
 size_t print_list(const list_t *h)
 {
-	list_t *temp;
-	unsigned int c = 0;
+	int count = 0;
 
-	temp = h;
-	while (temp != NULL)
+	while (h)
 	{
-		if (temp->str == NULL)
+		if (h->str == NULL)
+		{
 			printf("[0] (nil)\n");
+		}
 		else
-		printf("[%d]%s", temp->len, temp->str);
-		c++;
-		temp = temp->next;
+		{
+		printf("[%d] %s\n", h->len, h->str);
+		}
+		count++;
+		h = h->next;
 	}
-	printf("[%d]%s", temp->len, temp->str);
-	return (c);
-}
+	return (count);
+}I
