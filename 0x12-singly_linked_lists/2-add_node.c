@@ -8,11 +8,11 @@
  * @s : s is a character
  * Return: value is i
  */
-int _strlen(const char *s)
+int _strlen(const char *str)
 {
 	int i = 0;
 
-	while (s[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
@@ -33,10 +33,12 @@ list_t *add_node(list_t **head, const char *str)
 	if (add == NULL)
 		return (NULL);
 	add->str = strdup(str);
-
-	add->len = _strlen(str);
+	if (add->str == NULL)
+	{
+		free(add);
+		return (NULL);
+	}
 	add->next = *head;
 	*head = add;
-
 	return (add);
 }
